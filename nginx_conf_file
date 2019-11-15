@@ -31,6 +31,19 @@ load balancing -- /etc/nginx/conf.d/load.conf
     ---------------------------------------------------
 nginx -t
 nginx -s reload
-----------------------
+====================================================================
 https://gist.github.com/soheilhy/8b94347ff8336d971ad0
-------------------------------------
+
+
+server {
+    location /app1 {
+        rewrite ^/app1(.*) /$1 break;
+        proxy_pass http://172.17.0.3;
+    }
+
+    location /app2 {
+        rewrite ^/app2(.*) /$1 break;
+        proxy_pass http://172.17.0.4;
+    }
+}
+------------------------------------------------------------
