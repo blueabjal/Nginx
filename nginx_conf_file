@@ -32,3 +32,5 @@ load balancing -- /etc/nginx/conf.d/load.conf
 nginx -t
 nginx -s reload
 ----------------------
+https://gist.github.com/soheilhy/8b94347ff8336d971ad0
+------------------------------------
