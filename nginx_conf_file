@@ -34,6 +34,8 @@ nginx -s reload
 ====================================================================
 https://gist.github.com/soheilhy/8b94347ff8336d971ad0
 
+path based routing  --- /etc/nginx/conf.d/path.conf
+----------------------------------------------------
 
 server {
     location /app1 {
